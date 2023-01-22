@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom"],
+        "types": ["cypress", "cypress/support/globals.d.ts", "node"],
+        "strict": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "baseUrl": "../node_modules",
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["cypress/**/*.ts"]
+}
