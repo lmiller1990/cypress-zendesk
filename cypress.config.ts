@@ -34,7 +34,7 @@ export default defineConfig({
       return legacyConfig(on, config); // since we still use the old plugin file to override configs
     },
     specPattern: "cypress/tests/**/*.{js,jsx,ts,tsx}",
-    baseUrl: "https://playvox5010.zendesk.com",
+    baseUrl: "https://playvox8416.zendesk.com",
     experimentalSessionAndOrigin: true,
     env: {
       grepFilterSpecs: true,
