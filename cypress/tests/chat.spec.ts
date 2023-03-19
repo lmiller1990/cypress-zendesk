@@ -1,15 +1,15 @@
-import { Zendesk } from "../pages/zendesk";
+import { ZendeskChat } from "../pages/zendeskChat";
 
 describe("chat", () => {
   const baseUrl = Cypress.env("BASE_URL");
   const email = Cypress.env("EMAIL");
   const password = Cypress.env("PASSWORD");
 
-  let zendesk: Zendesk;
+  let zendesk: ZendeskChat;
 
   before("Setup services", () => {
     cy.login(email, password).visit(`${baseUrl}/agent/dashboard`);
-    zendesk = new Zendesk();
+    zendesk = new ZendeskChat();
   });
 
   it("test chat", () => {

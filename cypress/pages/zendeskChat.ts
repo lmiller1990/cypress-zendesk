@@ -1,4 +1,4 @@
-export class Zendesk {
+export class ZendeskChat {
   private chatUrl: string;
 
   constructor() {
