@@ -7,12 +7,12 @@ export class ZendeskTicket {
   private addSubject() {
     cy.get('[data-test-id="omni-header-subject"]')
       .click()
-      .type(`Cypress ticket ${new Date().toDateString()}{enter}`);
+      .realType(`Cypress ticket ${new Date().toDateString()}{enter}`);
     return this;
   }
 
   private addComment(comment: string) {
-    cy.get('[data-test-id="omnicomposer-rich-text-ckeditor"]').type(comment);
+    cy.get('[data-test-id="omnicomposer-rich-text-ckeditor"]').realType(comment);
     cy.get('[data-test-id="omnicomposer-rich-text-ckeditor"]').should(
       "have.text",
       comment
@@ -54,7 +54,7 @@ export class ZendeskTicket {
   updateTicket(isPublic: boolean = true) {
     const date = new Date().toISOString();
     // public comment
-    cy.get('[data-test-id="omnicomposer-rich-text-ckeditor"]').click();
+    cy.get('[data-test-id="omnicomposer-rich-text-ckeditor"]').first().click();
     if (isPublic === false) {
       // internal comment
       cy.get('[data-test-id="omnichannel-channel-switcher-button"]')

@@ -38,3 +38,6 @@ Cypress.Commands.add("loginWithForm", (email, password) => {
   cy.get("[type=email]").type(email, { log: false });
   cy.get("[type=password]").type(`${password}{enter}`, { log: false });
 });
+
+
+import "cypress-real-events";
